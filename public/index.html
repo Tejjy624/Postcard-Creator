@@ -1,0 +1,93 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show me!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Indie+Flower|Long+Cang&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        Daily Postcard Creator
+      </h1>
+    </header>
+    <main>
+      <div id="maincontent">
+        <div class="image">
+          <div class="imageWrapper">
+            <img id="serverImage" src="data" alt=""/>
+          </div>
+          <div id="controls" class="controlstyle">
+            <label for="fileChooser" class="filestyle">Choose image</label>
+            <input
+              type="file"
+              id="fileChooser"
+              accept="image/png, .jpeg, .jpg, image/gif"
+            />
+          </div>
+        </div>
+        <div contenteditable="true" id="messagecontainer">
+          <p id="message">Write your message here!</p>
+        </div>
+      </div>
+
+      <div id="choices">
+        <div class="choosefont">
+          <h2>Choose your font</h2>
+          <div class="fonts">
+            <div class="fontstyle font1" onclick="changefont(0)">
+              <span>&#10070;</span>Indie Flower
+            </div>
+            <div class="fontstyle font2" onclick="changefont(1)">
+              <span>&#11046;</span>Dancing Script
+            </div>
+            <div class="fontstyle font3" onclick="changefont(2)">
+              <span>&#11046;</span>Long Cang
+            </div>
+            <div class="fontstyle font4" onclick="changefont(3)">
+              <span>&#11046;</span>
+              Homemade Apple
+            </div>
+          </div>
+        </div>
+
+        <div class="choosecolor">
+          <h2>Choose your color</h2>
+          <div class="color-picker">
+            <span class="box color1" onclick="changecolor('0')"></span>
+            <span class="box color2" onclick="changecolor('1')"></span>
+            <span class="box color3" onclick="changecolor('2')"></span>
+            <span class="box color4" onclick="changecolor('3')"></span>
+            <span class="box color5" onclick="changecolor('4')"></span>
+            <span class="box color6" onclick="changecolor('5')"></span>
+            <span class="box color7" onclick="changecolor('6')"></span>
+            <span class="box color8" onclick="changecolor('7')"></span>
+            <span class="box color9" onclick="changecolor('8')"></span>
+          </div>
+        </div>
+        <button class="sharebutton" id="share">Share postcard</button>
+      </div>
+    </main>
+
+    <footer>
+      <p class="msg">
+        Made on Glitch!
+      </p>
+      <!-- adds the glitch button at the bottom -->
+      <div class="glitchButton"></div>
+      <script src="https://button.glitch.me/button.js"></script>
+      <script src="./script.js"></script>
+    </footer>
+  </body>
+</html>
